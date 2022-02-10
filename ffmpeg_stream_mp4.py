@@ -45,7 +45,7 @@ def stream(url):
 	print('ffmpeg stream mp4')
 	now = datetime.datetime.now()
 	#format_string = '/Users/hummingbird/Desktop/moon/scripts/ffmpeg/ffmpeg_stream_mp4.sh ' + str(url)
-	format_string = 'ffmpeg  -i ' + url + ' -map m:Video:1280x720 -c copy -bsf:a aac_adtstoasc ' + '/downloads' + '/' + str(now.hour) + str(now.minute) + str(now.second) + '.flv'
+	format_string = 'ffmpeg  -i ' + url + ' -map m:Video:'h264 (Main) ([27][0][0][0] / 0x001B), yuv420p, 1280x720' -c copy -bsf:a aac_adtstoasc ' + '/downloads' + '/' + str(now.hour) + str(now.minute) + str(now.second) + '.flv'
 	command = str(format_string)
 	os.system(command)
 	return

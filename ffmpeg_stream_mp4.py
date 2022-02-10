@@ -25,8 +25,9 @@ def chatturbate_find_playlist(url):
 	# read html code
 	html = website.read()
 	html = str(html)
+	jstring = jstring[0].replace('\\u002D','-')
 
-	items = re.findall('https://edge(.*?)/playlist.m3u8',html,re.DOTALL)
+	items = re.findall('https://edge(.*?)/playlist.m3u8',html,re.DOTALL,jstring)
 	if '[]' in str(items):
 		return False
 	else:

@@ -28,12 +28,12 @@ def chatturbate_find_playlist(url):
 	
 	
 	items = re.findall('https://edge(.*?)/playlist.m3u8',html,re.DOTALL,)
-	items2 = re.sub(r"\\u002D", "-", items)
 	if '[]' in str(items):
 		return False
 	else:
-		item = 'https://edge' + items2[0] + '/playlist.m3u8'
-		return item
+		item = 'https://edge' + items[0] + '/playlist.m3u8'
+		item2 = re.sub(r"\\u002D", "-", item)
+		return item2
 
 def xhamster_find_playlist(url):
 	pass
